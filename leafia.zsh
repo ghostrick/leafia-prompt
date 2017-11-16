@@ -6,16 +6,18 @@ function prompt_leafia_setup {
 
 function prompt_leafia_precmd {
 
-    Color=(35 114 229)
+    Color=(35 114 230)
 
     if (( $+functions[git-info] )); then
         git-info
     fi
 
-    zstyle ':prezto:module:git:info:branch' format '%b%f'
-    zstyle ':prezto:module:git:info:keys' format 'prompt' "\e[38;5;245m(\e[38;5;$Color[3]m%b\e[38;5;245m)"
+    zstyle ':prezto:module:git:info' verbose 'yes'
+    zstyle ':prezto:module:git:info:branch' format '%F{'$Color[3]'}%b%f'
+    zstyle ':prezto:module:git:info:dirty' format '%F{'$Color[3]'}*%f'
+    zstyle ':prezto:module:git:info:keys' format 'prompt' '%F{'$Color[3]'} %b%D'
 
-    print -P "\e[38;5;$Color[2]m%d%f${git_info:+${(e)git_info[prompt]}}"
+    print -P "\e[38;5;$Color[2]m%d%f ${git_info:+${(e)git_info[prompt]}}"
 }
 
 function prompt_leafia_preview {
