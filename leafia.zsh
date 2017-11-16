@@ -1,12 +1,11 @@
 
 # add color palette
-Color=(35 114 230 227)
+Color=(35 114 230 228)
 
 # setting syntax-highlighting color
 typeset -g -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[command]="fg=$Color[2]"
 ZSH_HIGHLIGHT_STYLES[alias]="fg=$Color[2]"
-ZSH_HIGHLIGHT_STYLES[path]="fg=$Color[1]"
 ZSH_HIGHLIGHT_STYLES[globbing]="fg=$Color[3]"
 ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=245"
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]="fg=$Color[4]"
@@ -28,9 +27,9 @@ function prompt_leafia_precmd {
     fi
 
     zstyle ':prezto:module:git:info' verbose 'yes'
-    zstyle ':prezto:module:git:info:branch' format '%F{'$Color[3]'}%b%f'
-    zstyle ':prezto:module:git:info:dirty' format '%F{'$Color[3]'}*%f'
-    zstyle ':prezto:module:git:info:keys' format 'prompt' '%F{'$Color[3]'} %b%D'
+    zstyle ':prezto:module:git:info:branch' format '%F{'$Color[4]'}%b%f'
+    zstyle ':prezto:module:git:info:dirty' format '%F{'$Color[4]'}*%f'
+    zstyle ':prezto:module:git:info:keys' format 'prompt' '%F{'$Color[4]'} %b%D'
 
     print -P "\e[38;5;$Color[2]m%d%f ${git_info:+${(e)git_info[prompt]}}"
 }
