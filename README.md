@@ -1,1 +1,1 @@
-# ngmr-prezto-theme
+# ngmr-zsh
