@@ -9,3 +9,5 @@ $ ln -s ~/.zprezto/modules/prompt/external/leafia-prompt/leafia.zsh ~/.zprezto/m
 ```
 Set `zstyle ':prezto:module:prompt' theme 'leafia'` in `~/.zpreztorc`.
 
+
+<img src='https://raw.githubusercontent.com/Ghostrick/leafia-prompt/master/screen_shot/leafia-prompt.png' width='600'>
