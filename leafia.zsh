@@ -31,7 +31,7 @@ function prompt_leafia_precmd {
     zstyle ':prezto:module:git:info:dirty' format '%F{'$Color[4]'}*%f'
     zstyle ':prezto:module:git:info:keys' format 'prompt' '%F{'$Color[4]'} %b%D'
 
-    print -P "\e[38;5;$Color[2]m%d%f ${git_info:+${(e)git_info[prompt]}}"
+    print -P "\e[38;5;$Color[2]m%~%f ${git_info:+${(e)git_info[prompt]}}"
 }
 
 function prompt_leafia_preview {
